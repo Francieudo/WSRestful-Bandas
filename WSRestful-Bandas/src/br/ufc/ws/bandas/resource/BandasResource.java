@@ -13,10 +13,12 @@ import br.ufc.ws.bandas.model.Banda;
 @Path("/bandas")
 public class BandasResource {
 	
+	private BandasController bc = new BandasController();
+	
 	@GET
 	@Path("/listarTodos")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Banda> listAll(){
-		return new BandasController().listAll();
+		return bc.listAll();
 	}
 }
