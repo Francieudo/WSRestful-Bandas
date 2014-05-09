@@ -6,8 +6,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 public class JPAUtil {
-	private static final EntityManagerFactory emf = Persistence
-			.createEntityManagerFactory("dev");
+	private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("dev");
 
 	private static ThreadLocal<EntityManager> ems = new ThreadLocal<EntityManager>();
 
