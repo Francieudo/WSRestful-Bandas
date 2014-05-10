@@ -14,10 +14,14 @@ public class JPAUtil {
 	 * existir, é criado e depois, vinculado à Thread atual.
 	 */
 	public static EntityManager getEntityManager() {
+		System.out.println("entrou no metodo getEntityManager - JPAUtil");
 		EntityManager em = ems.get();
 		if (em == null) {
+			System.out.println("entrou no if");
 			em = emf.createEntityManager();
+			System.out.println("executou o emf");
 			ems.set(em);
+			System.out.println("executou o ems");
 		}
 		return em;
 	}

@@ -7,7 +7,6 @@ import javax.persistence.criteria.CriteriaQuery;
 
 import br.ufc.ws.bandas.util.JPAUtil;
 
-
 public abstract class GenericJPADAO<T> implements GenericDAO<T>{
 	protected EntityManager em = JPAUtil.getEntityManager();
 	protected Class<T> persistentClass;
@@ -33,5 +32,4 @@ public abstract class GenericJPADAO<T> implements GenericDAO<T>{
 	public void close() {
 		JPAUtil.closeEntityManager();
 	}
-
 }
